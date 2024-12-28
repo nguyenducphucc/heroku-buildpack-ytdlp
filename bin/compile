@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+mkdir -p vendor/yt
+cd vendor/yt
+curl --location https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o yt-dlp
+chmod a+rx yt-dlp
