@@ -9,3 +9,7 @@ cd vendor/yt
 echo "downloading files"
 curl --location https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o yt-dlp
 chmod a+rx yt-dlp
+./yt-dlp --version
+PROFILE_PATH="$BUILD_DIR/.profile.d/yt-dlp.sh"
+mkdir -p $(dirname $PROFILE_PATH)
+echo 'export PATH="$PATH:/app/vendor/yt"' >> $PROFILE_PATH
